@@ -14,7 +14,7 @@ class system::network::dns (
     $options     = $_config['options']
     assert_type(Array, $domains)
     assert_type(Array, $nameservers)
-    assert_types(Array, $options)
+    assert_type(Array, $options)
 
     file { '/etc/resolv.conf':
       ensure  => 'file',
